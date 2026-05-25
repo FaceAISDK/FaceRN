@@ -24,17 +24,31 @@ target 'FaceRN' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+
   post_install do |installer|
-    react_native_post_install(
-      installer,
-      config[:reactNativePath],
-      :mac_catalyst_enabled => false,
-      # :ccache_enabled => true
-    )
-    installer.pods_project.build_configurations.each do |config|
-      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"  ## 兼容模拟器
-      config.build_settings["CLANG_ENABLE_MODULES"] = "YES"
-    end
+      react_native_post_install(
+        installer,
+        config[:reactNativePath],
+        :mac_catalyst_enabled => false,
+        # :ccache_enabled => true
+      )
+      
+      # 1. 优化全局项目配置
+      installer.pods_project.build_configurations.each do |config|
+        config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"  ## 兼容模拟器
+        config.build_settings["CLANG_ENABLE_MODULES"] = "YES"
+      end
+      
+      # 2. 遍历所有 target 并修复 RCTSwiftUI 错误 (修复语法错误的关键)
+      installer.pods_project.targets.each do |target|
+        if target.name == 'RCTSwiftUI'
+          target.build_configurations.each do |config|
+            # 强制允许 Swift 模块共享其头文件映射，解决 no such module 'React'
+            config.build_settings['DEFINES_MODULE'] = 'YES'
+          end
+        end
+      end
+    
   end
 end
 
