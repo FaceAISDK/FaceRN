@@ -13,8 +13,6 @@ FaceAISDK 人脸识别、活体检测 React Native 演示项目，支持 iOS 和
 | 同步人脸特征信息 | ✅ | ✅ |
 | 图片录入人脸信息 | ✅ | ✅ |
 | 删除人脸特征信息 | ✅ | ✅ |
-| 切换摄像头 | - | ✅ |
-| 跳转原生FaceAI导航页面 | ✅ | ✅ |
 
 ## 统一回调结果结构
 
@@ -99,6 +97,7 @@ npm run android
 bundle install
 bundle exec pod install
 npm run ios
+**iOS第一次运行如遇闪退，请执行pod update FaceAISDK_Core后重新运行**
 ```
 
 ## 桥接模块 API

@@ -1,7 +1,6 @@
 PODS:
-  - FaceAISDK_Core (2026.05.21.xcode265):
+  - FaceAISDK_Core (2026.05.28.xcode15):
     - GoogleMLKit/FaceDetection (= 9.0.0)
-    - GTMSessionFetcher
     - TensorFlowLiteSwift (= 2.17.0)
   - FBLazyVector (0.84.0)
   - GoogleDataTransport (10.1.0):
@@ -26,11 +25,7 @@ PODS:
   - GoogleUtilities/UserDefaults (8.1.0):
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
-  - GTMSessionFetcher (3.5.0):
-    - GTMSessionFetcher/Full (= 3.5.0)
   - GTMSessionFetcher/Core (3.5.0)
-  - GTMSessionFetcher/Full (3.5.0):
-    - GTMSessionFetcher/Core
   - hermes-engine (250829098.0.7):
     - hermes-engine/Pre-built (= 250829098.0.7)
   - hermes-engine/Pre-built (250829098.0.7)
@@ -1920,7 +1915,7 @@ PODS:
   - Yoga (0.0.0)
 
 DEPENDENCIES:
-  - FaceAISDK_Core (from `https://github.com/FaceAISDK/FaceAISDK_Core.git`, tag `2026.05.21.xcode265`)
+  - FaceAISDK_Core (from `https://github.com/FaceAISDK/FaceAISDK_Core.git`, tag `2026.05.28.xcode15`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - RCTDeprecation (from `../node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
@@ -2016,7 +2011,7 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   FaceAISDK_Core:
     :git: https://github.com/FaceAISDK/FaceAISDK_Core.git
-    :tag: 2026.05.21.xcode265
+    :tag: 2026.05.28.xcode15
   FBLazyVector:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   hermes-engine:
@@ -2170,10 +2165,10 @@ EXTERNAL SOURCES:
 CHECKOUT OPTIONS:
   FaceAISDK_Core:
     :git: https://github.com/FaceAISDK/FaceAISDK_Core.git
-    :tag: 2026.05.21.xcode265
+    :tag: 2026.05.28.xcode15
 
 SPEC CHECKSUMS:
-  FaceAISDK_Core: ee2922cfdbb107075ec9f13b53c61170ede3a193
+  FaceAISDK_Core: 028d37cda9b9c9191414070c22ae72679fba863a
   FBLazyVector: c12d2108050e27952983d565a232f6f7b1ad5e69
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleMLKit: b1eee21a41c57704fe72483b15c85cb2c0cd7444
@@ -2262,6 +2257,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteSwift: 723fe42222815e72490c79feeff05305530de393
   Yoga: 772166513f9cd2d61a6251d0dacbbfaa5b537479
 
-PODFILE CHECKSUM: b2d9279aadcc4538d9023028eb1c41a5cd744f94
+PODFILE CHECKSUM: ffc275a85a0c58a0c8f7e6b6768cd56479034edc
 
 COCOAPODS: 1.16.2
